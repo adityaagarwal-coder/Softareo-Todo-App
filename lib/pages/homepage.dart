@@ -9,9 +9,6 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
-
-String userId = "1:1007450016897:web:e97bccda9dd6507a509180";
-
 class _HomeState extends State<Home> {
   late Stream taskStream;
 
@@ -19,7 +16,7 @@ class _HomeState extends State<Home> {
   TextEditingController taskEdittingControler = new TextEditingController();
   @override
   void initState() {
-    databaseServices.getTasks(userId).then((val) {
+    databaseServices.getTasks().then((val) {
       taskStream = val;
       setState(() {});
     });
