@@ -29,7 +29,7 @@ class _TileState extends State<Tile> {
                     "isCompleted": !widget.isCompleted
                   };
                   DatabaseServices()
-                      .updateTask(userId, taskMap, widget.documentId);
+                      .updateTask(taskMap, widget.documentId);
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -77,15 +77,14 @@ class _TileState extends State<Tile> {
                     "isCompleted": false
                   };
                   edittext = true;
-                  DatabaseServices().updateTask(
-                      userId, taskMap, widget.documentId); //Edit Todo
+                  DatabaseServices().updateTask(taskMap, widget.documentId); //Edit Todo
                 }),
             SizedBox(
               width: 8,
             ),
             GestureDetector(
               onTap: () {
-                DatabaseServices().deleteTask(userId, widget.documentId);
+                DatabaseServices().deleteTask(widget.documentId);
               },
               child: Icon(Icons.close,
                   size: 10, color: Colors.black), // Delete Todo
