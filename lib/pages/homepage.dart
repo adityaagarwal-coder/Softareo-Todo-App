@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.grey,
         ),
         body: Container(
-          child: Column(margin:EdgeInsets.symmetric(horizonal:50,
+          child: Column(margin:EdgeInsets.symmetric(horizonal:50),
             children: [
               const Text("TO DO APP"),
               Row(
