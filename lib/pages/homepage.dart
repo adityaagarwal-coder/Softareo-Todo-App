@@ -82,8 +82,7 @@ class _HomeState extends State<Home> {
                               "isCompleted": false
                             };
 
-                            databaseServices.createTask(
-                                userId, taskMap); // Create Todo
+                            databaseServices.createTask(taskMap); // Create Todo
                             taskEdittingControler.text = "";
                           },
                           child: Container(
