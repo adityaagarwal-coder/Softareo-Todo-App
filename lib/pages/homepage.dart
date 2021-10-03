@@ -50,7 +50,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.grey,centerTitle: true,
+          title: Text("Todo App"),
         ),
         body: Container(
           child: Column(margin:EdgeInsets.symmetric(horizonal:50),
