@@ -62,13 +62,13 @@ class _TileState extends State<Tile> {
                     ),
                   ),
             SizedBox(
-              width: 8,
+              width: 180,
             ),
             GestureDetector(
                 // Edit Todo
                 child: Icon(
                   Icons.edit,
-                  size: 10,
+                  size: 20,
                   color: Colors.black,
                 ),
                 onTap: () {
@@ -87,7 +87,7 @@ class _TileState extends State<Tile> {
                 DatabaseServices().deleteTask(widget.documentId);
               },
               child: Icon(Icons.close,
-                  size: 10, color: Colors.black), // Delete Todo
+                  size: 20, color: Colors.black), // Delete Todo
             )
           ],
         ));
