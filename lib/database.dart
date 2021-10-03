@@ -9,7 +9,7 @@ class DatabaseServices {
   }
 
   dynamic createTask(Map<String, dynamic> taskMap) {
-    FirebaseFirestore.instance.doc(userId).collection("tasks").add(taskMap);
+    FirebaseFirestore.instance.collection("tasks").add(taskMap);
   }
 
   getTasks() async {
